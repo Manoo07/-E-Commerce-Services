@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: amazon
+  datasource:
+    url: jdbc:postgresql://localhost:5423/ecommerce_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+server:
+  port: 8080
